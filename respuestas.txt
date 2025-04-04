@@ -1,0 +1,2 @@
+Note el cambio de color luego de la combinacion
+Note que las ramas de desarrollo se mezclaron y la cronologia de cambios se sincronizaron.
