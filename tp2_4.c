@@ -20,6 +20,16 @@ srand(time(NULL));
 char tipos[6][10] = {"Intel", "AMD", "Celeron", "Athlon", "Core",
     "Pentium"};
     struct compu pcs[5];
+
+// generamos los datos aleatoriamente
+for (int i = 0; i < 5; i++)
+{
+    pcs[i].velocidad = rand()% 3 + 1;
+    pcs[i].anio = rand()% 10 + 2015;
+    pcs[i].cantidad_nucleos = rand() % 8 + 1;
+    pcs[i].tipo_cpu= tipos[rand() % 6];
+}
+
     
 
     return 0;
