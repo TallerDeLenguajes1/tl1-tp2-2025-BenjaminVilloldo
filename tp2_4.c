@@ -39,3 +39,41 @@ for (int i = 0; i < 5; i++)
     return 0;
 }
 
+void listarPCs(struct compu pcs[], int cantidad) {
+    for (int i = 0; i < cantidad; i++) {
+        printf("PC #%d:\n", i + 1);
+        printf("  Velocidad: %d GHz\n", pcs[i].velocidad);
+        printf("  Año: %d\n", pcs[i].anio);
+        printf("  Núcleos: %d\n", pcs[i].cantidad_nucleos);
+        printf("  Tipo CPU: %s\n", pcs[i].tipo_cpu);
+        printf("-----------------------\n");
+    }
+}
+void mostrarMasVieja(struct compu pcs[], int cantidad) {
+    int indice = 0;
+    for (int i = 1; i < cantidad; i++) {
+        if (pcs[i].anio < pcs[indice].anio) {
+            indice = i;
+        }
+    }
+
+    printf("  Velocidad: %d GHz\n", pcs[indice].velocidad);
+    printf("  Año: %d\n", pcs[indice].anio);
+    printf("  Núcleos: %d\n", pcs[indice].cantidad_nucleos);
+    printf("  Tipo CPU: %s\n", pcs[indice].tipo_cpu);
+}
+
+// Función que muestra la PC más rápida
+void mostrarMasVeloz(struct compu pcs[], int cantidad) {
+    int indice = 0;
+    for (int i = 1; i < cantidad; i++) {
+        if (pcs[i].velocidad > pcs[indice].velocidad) {
+            indice = i;
+        }
+    }
+
+    printf("  Velocidad: %d GHz\n", pcs[indice].velocidad);
+    printf("  Año: %d\n", pcs[indice].anio);
+    printf("  Núcleos: %d\n", pcs[indice].cantidad_nucleos);
+    printf("  Tipo CPU: %s\n", pcs[indice].tipo_cpu);
+}
