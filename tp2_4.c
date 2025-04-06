@@ -29,8 +29,13 @@ for (int i = 0; i < 5; i++)
     pcs[i].cantidad_nucleos = rand() % 8 + 1;
     pcs[i].tipo_cpu= tipos[rand() % 6];
 }
-
-    
+ printf("\n===LISTA DE PCs===\n");
+ listarPCs(pcs,5);
+ printf("\n===PC MAS VIEJA=== \n");
+ mostrarMasVieja(pcs,5);
+ printf("\n===PC MAS RAPIDA=== \n");
+ mostrarMasVeloz(pcs,5);
 
     return 0;
 }
+
